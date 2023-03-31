@@ -1,7 +1,9 @@
 pipeline {
     //agent any
     agent { label 'linux' }
-    
+    tools {
+         maven 'v3.9.1'
+    }
     stages {
         stage('build') {
             steps {
